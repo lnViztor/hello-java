@@ -20,7 +20,10 @@ public class Loops {
         for (int index = 0; index < 5; index++) {
             System.out.println("Hola, Java!");
         }
-
+        // #########################
+        System.out.println("####################");
+        // #########################
+        // - for controlado por array
         String[] names = {"Brais", "Moure", "mouredev"};
 
         for (int index = 0; index < names.length; index++) {

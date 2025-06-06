@@ -13,6 +13,7 @@ Vídeo: https://www.twitch.tv/videos/2428998601
 public class HelloWorld {
 
     public static void main(String[] args) {
-        System.out.println("Hola, Java!");
+
+        System.out.print("Hola, Java!");
     }
 }
