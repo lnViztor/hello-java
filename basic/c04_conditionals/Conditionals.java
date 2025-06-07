@@ -24,6 +24,11 @@ public class Conditionals {
         } else {
             System.out.println("El usuario es menor de edad");
         }
+        // if ternario
+        var isAdult = age >= 18 ? "El usuario es mayor de edad" : "El usuario es menor de edad";
+        System.out.println(isAdult);
+
+
 
         // switch
 
