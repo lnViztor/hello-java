@@ -15,7 +15,7 @@ public class Loops {
 
         // Loops
 
-        // - for controlado por contador
+        // -1  for controlado por contador
 
         for (int index = 0; index < 5; index++) {
             System.out.println("Hola, Java!");
@@ -30,7 +30,7 @@ public class Loops {
             System.out.println(names[index]);
         }
 
-        // - for-each
+        // -2 for-each
 
         for (String name: names) {
             System.out.println(name);
@@ -57,7 +57,7 @@ public class Loops {
             System.out.println(email.getValue());
         }
 
-        // - while
+        // -3 while
 
         int index = 0;
         while (index < 5) {
@@ -81,7 +81,7 @@ public class Loops {
             index++;
         }
 
-        // - do-while
+        // -4 do-while
 
         index = 0;
         do {
@@ -89,7 +89,7 @@ public class Loops {
             index++;
         } while (index < 0);
 
-        // Control de bucles
+        // -5 Control de bucles
 
         // - break
 

@@ -47,5 +47,35 @@ public class Conditionals {
             default:
                 System.out.println("No es lunes, martes o miércoles");
         }
+        // switch con String
+        var dayName = "Lunes";
+        switch (dayName) {
+            case "Lunes":
+                System.out.println("Hoy es lunes");
+                break;
+            case "Martes":
+                System.out.println("Hoy es martes");
+                break;
+            case "Miércoles":
+                System.out.println("Hoy es miércoles");
+                break;
+            default:
+                System.out.println("No es lunes, martes o miércoles");
+        }
+        // switch con String y expresión
+        var dayOfWeek = "Lunes";
+        switch (dayOfWeek.toLowerCase()) {
+            case "lunes":
+                System.out.println("Hoy es lunes");
+                break;
+            case "martes":
+                System.out.println("Hoy es martes");
+                break;
+            case "miércoles":
+                System.out.println("Hoy es miércoles");
+                break;
+            default:
+                System.out.println("No es lunes, martes o miércoles");
+        }
     }
 }
