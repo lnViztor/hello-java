@@ -5,7 +5,7 @@ Clase 6 - Clases, encapsulamiento y herencia (14/05/2025)
 Vídeo: https://www.twitch.tv/videos/2459212698
 */
 
-public class Inheritance {
+public class a06_Inheritance {
 
     public static void main(String[] args) {
 

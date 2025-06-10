@@ -9,7 +9,39 @@ public class a05_AccessModifiersExercises {
 
     public static void main(String[] args) {
 
-        // 1. Crea una clase Person con atributos privados name y age. Usa los métodos getName(), setName(), getAge() y setAge() para asignar y mostrar valores desde otra clase.
+        // 1. Crea una clase Person con atributos privados name y age.
+        // Usa los métodos getName(), setName(), getAge() y setAge() para asignar y mostrar valores desde otra clase.
+        class Person {
+            private String name;
+            private int age;
+
+            public String getName() {
+                return name;
+            }
+
+            public void setName(String name) {
+                this.name = name;
+            }
+
+            public int getAge() {
+                return age;
+            }
+
+            public void setAge(int age) {
+                if (age >= 0) {
+                    this.age = age;
+                } else {
+                    System.out.println("Age cannot be negative.");
+                }
+            }
+        }
+        // Ejemplo de uso de la clase Person
+        Person person = new Person();
+        person.setName("John Doe");
+        person.setAge(30);
+        System.out.println("Name: " + person.getName());
+        System.out.println("Age: " + person.getAge());
+
 
         // 2. Crea una clase Product con el atributo privado price. Añade el método setPrice(double price) que solo permita precios mayores a 0.
 

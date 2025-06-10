@@ -5,7 +5,7 @@ Clase 7 - Polimorfismo, abstracción y composición (21/05/2025)
 Vídeo: https://www.twitch.tv/videos/2464789369
 */
 
-public class InheritanceExercises {
+public class a06_InheritanceExercises {
 
     public static void main(String[] args) {
 
