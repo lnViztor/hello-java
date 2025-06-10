@@ -5,8 +5,8 @@ Clase 8 - Manejo de excepciones, depuración y extras (28/05/2025)
 Vídeo: https://www.twitch.tv/videos/2471305243
 */
 
-import basic.c08_oop.Classes;
-import basic.c08_oop.Person;
+import basic.c08_oop.a01_Classes;
+import basic.c08_oop.a02_Person;
 
 import java.util.Scanner;
 //import basic.c08_oop.*;
@@ -29,8 +29,8 @@ public class Extras {
 
         // import
 
-        new Person("Brais", 18, "1");
-        new Classes();
+        new a02_Person("Brais", 18, "1");
+        new a01_Classes();
 
         // Scanner
 
