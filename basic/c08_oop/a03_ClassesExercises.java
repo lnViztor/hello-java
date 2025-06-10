@@ -25,6 +25,16 @@ public class a03_ClassesExercises {
         }
 
         // 2. Crea una clase Dog con un método bark() que imprima su sonido.
+        class Dog {
+            public void bark() {
+                System.out.println("Woof! Woof!");
+            }
+        }
+        // Ejemplo de uso de la clase Dog
+        Dog myDog = new Dog();
+        myDog.bark();
+
+
 
         // 3. Añade un constructor a la clase Book que reciba title y author.
 
