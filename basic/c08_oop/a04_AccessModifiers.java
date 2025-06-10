@@ -10,6 +10,8 @@ public class a04_AccessModifiers {
     public static void main(String[] args) {
 
         // Encapsulamiento
+        // - Es una técnica de programación que consiste en ocultar los detalles internos de una clase y exponer solo lo necesario a través de métodos públicos.
+        // - Se logra declarando los atributos como privados y proporcionando métodos públicos (getters y setters) para acceder y modificar esos atributos.
 
         // - Modificadores de acceso
         // public: acceso desde cualquier parte del código
