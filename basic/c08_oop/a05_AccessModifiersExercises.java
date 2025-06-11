@@ -42,12 +42,70 @@ public class a05_AccessModifiersExercises {
         System.out.println("Name: " + person.getName());
         System.out.println("Age: " + person.getAge());
 
+        // 2. Crea una clase Product con el atributo privado price.
+        // Añade el método setPrice(double price) que solo permita precios mayores a 0.
+        class Product {
+            private double price;
 
-        // 2. Crea una clase Product con el atributo privado price. Añade el método setPrice(double price) que solo permita precios mayores a 0.
+            public void setPrice(double price) {
+                if (price > 0) {
+                    this.price = price;
+                } else {
+                    System.out.println("Price must be greater than 0.");
+                }
+            }
+
+            public double getPrice() {
+                return price;
+            }
+        }
+        // Ejemplo de uso de la clase Product
+        Product product = new Product();
+        product.setPrice(100.0);
+        System.out.println("Product price: " + product.getPrice());
 
         // 3. Crea una clase BankAccount con el atributo privado balance. Implementa los métodos deposit(double amount) y withdraw(double amount) que validen las cantidades correctamente.
+        class BankAccount {
+            private double balance;
 
-        // 4. Crea una clase Book con el atributo privado title. Permite leerlo con el método getTitle() pero no modificarlo (sin setTitle()). El título debe asignarse solo por el constructor.
+            public void deposit(double amount) {
+                if (amount > 0) {
+                    balance += amount;
+                    System.out.println("Deposited: " + amount + ", New balance: " + balance);
+                } else {
+                    System.out.println("Deposit amount must be greater than 0.");
+                }
+            }
+
+            public void withdraw(double amount) {
+                if (amount > 0 && amount <= balance) {
+                    balance -= amount;
+                    System.out.println("Withdrew: " + amount + ", New balance: " + balance);
+                } else {
+                    System.out.println("Invalid withdrawal amount.");
+                }
+            }
+
+            public double getBalance() {
+                return balance;
+            }
+        }
+        // Ejemplo de uso de la clase BankAccount
+        BankAccount account = new BankAccount();
+        account.deposit(500.0);
+        account.withdraw(200.0);
+        System.out.println("Current balance: " + account.getBalance());
+        // Ejemplo de uso de la clase BankAccount con un depósito negativo
+        account.deposit(-50); // Esto debería mostrar un mensaje de error
+        // Ejemplo de uso de la clase BankAccount con un retiro negativo
+        account.withdraw(-30); // Esto debería mostrar un mensaje de error
+        // Ejemplo de uso de la clase BankAccount con un retiro mayor al saldo
+        account.withdraw(400); // Esto debería mostrar un mensaje de error
+
+
+        // 4. Crea una clase Book con el atributo privado title.
+        // Permite leerlo con el método getTitle() pero no modificarlo (sin setTitle()).
+        //  El título debe asignarse solo por el constructor.
 
         // 5. Crea una clase Temperature con el atributo privado celsius. El método setCelsius(double celsius) solo debe aceptar valores entre -100 y 100.
 
