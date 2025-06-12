@@ -5,13 +5,14 @@ Clase 7 - Polimorfismo, abstracción y composición (21/05/2025)
 Vídeo: https://www.twitch.tv/videos/2464789369
 */
 
-public class Abstraction {
+public class a08_Abstraction {
 
     public static void main(String[] args) {
 
         // Abstracción
 
-        // - Clase abstracta
+        // - Clase abstracta: una clase que no se puede instanciar y puede contener métodos abstractos
+        // (sin implementación) y concretos (con implementación).
 
         var dog = new Dog();
         dog.sleep();
@@ -56,12 +57,13 @@ public class Abstraction {
         }
     }
 
-    // - Interface
+    // - Interface: una colección de métodos abstractos que una clase puede implementar.
 
     public interface Flying {
 
         void fly();
     }
+
 
     public static class Bird extends Animal implements Flying {
 
@@ -74,6 +76,7 @@ public class Abstraction {
         public void fly() {
             System.out.println("El pájaro vuela");
         }
+
     }
 
     public static class Bat extends Animal implements Flying {

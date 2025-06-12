@@ -5,7 +5,7 @@ Clase 7 - Polimorfismo, abstracción y composición (21/05/2025)
 Vídeo: https://www.twitch.tv/videos/2464789369
 */
 
-public class Polymorphism {
+public class a07_Polymorphism {
 
     public static void main(String[] args) {
 
@@ -25,6 +25,11 @@ public class Polymorphism {
         var calculator = new Calculator();
         System.out.println(calculator.sum(3, 5));
         System.out.println(calculator.sum(3.2, 5.4));
+        System.out.println(calculator.sum(3, 5, 3));
+        System.out.println(calculator.sum(3.2, 5.4, 3));
+        System.out.println(calculator.multiply(3, 5));
+        System.out.println(calculator.divide(10, 2));
+
     }
 
     // - Polimorfismo por herencia (sobrescritura)
@@ -47,6 +52,7 @@ public class Polymorphism {
     // - Polimorfismo por sobrecarga (sobrecarga de métodos)
 
     public static class Calculator {
+        // Métodos sobrecargados para sumar
 
         public int sum(int a, int b) {
             return a + b;
@@ -58,6 +64,21 @@ public class Polymorphism {
 
         public double sum(double a, double b) {
             return a + b;
+        }
+
+        public double sum(double a, double b, int c) {
+            return a + b + c;
+        }
+        // Métodos para restar, multiplicar y dividir
+        public int multiply(int a, int b) {
+            return a * b;
+        }
+        //dividir
+        public double divide(int a, int b) {
+            if (b == 0) {
+                throw new IllegalArgumentException("No se puede dividir por cero");
+            }
+            return (double) a / b;
         }
     }
 }

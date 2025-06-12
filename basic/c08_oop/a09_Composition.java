@@ -5,11 +5,13 @@ Clase 7 - Polimorfismo, abstracción y composición (21/05/2025)
 Vídeo: https://www.twitch.tv/videos/2464789369
 */
 
-public class Composition {
+public class a09_Composition {
 
     public static void main(String[] args) {
 
+        // Herencia ("es un")
         // Composición ("tiene un")
+        // - Composición: una clase contiene instancias de otras clases como atributos.
 
         var car = new Car();
         car.on();
