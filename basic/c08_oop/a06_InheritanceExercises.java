@@ -11,8 +11,8 @@ public class a06_InheritanceExercises {
 
     public static void main(String[] args) {
 
-        // 1. Crea una clase Vehicle con un método move().
-        //  Luego crea una subclase Car que herede de Vehicle y agrega el método honk().
+        // 1. Crea una clase Vehicle con un metodo move().
+        //  Luego crea una subclase Car que herede de Vehicle y agrega el metodo honk().
         class Vehicle {
             public void move() {
                 System.out.println("The vehicle is moving.");
@@ -24,17 +24,17 @@ public class a06_InheritanceExercises {
             }
         }
         // Ejemplo de uso de las clases Vehicle y Car
-        //Car myCar = new Car();
-        //myCar.move();
-        //myCar.honk();
+        Car myCar = new Car();
+        myCar.move();
+        myCar.honk();
 
 
         // 2. Define una clase Person con los atributos name y age.
         // Luego crea una clase Student que agregue el atributo grade y un método study().
         // Clase base Person
         class Person {
-            protected String name;
-            protected int age;
+            protected final String name;
+            protected final int age;
 
             // Constructor
             public Person(String name, int age) {
@@ -50,7 +50,7 @@ public class a06_InheritanceExercises {
 
         // Clase derivada Student
         class Student extends Person {
-            private String grade;
+            private final String grade;
 
             // Constructor
             public Student(String name, int age, String grade) {
@@ -70,15 +70,12 @@ public class a06_InheritanceExercises {
                 System.out.println("Grade: " + grade);
             }
         }
-//        // Ejemplo de uso de las clases Person y Student
-//        public class Main {
-//            public static void main(String[] args) {
-//                Student student = new Student("Ana", 20, "A");
-//                student.displayInfo();
-//                student.study();
-//            }
-//        }
+        // Ejemplo de uso de las clases Person y Student
+        Student student = new Student("Ana", 20, "A");
+        student.displayInfo();
+        student.study();
 
+        System.out.println("************************************************************************************");
 
         // 3. Crea una clase Animal con el método makeSound().
         //  Haz que Dog diga “Woof” y Cat diga “Meow” sobrescribiendo ese método.

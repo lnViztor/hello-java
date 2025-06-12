@@ -106,7 +106,7 @@ public class a05_AccessModifiersExercises {
         // Permite leerlo con el método getTitle() pero no modificarlo (sin setTitle()).
         //  El título debe asignarse solo por el constructor.
         class Book {
-            private String title;
+            private final String title;
 
             public Book(String title) {
                 this.title = title;
