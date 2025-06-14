@@ -9,9 +9,67 @@ public class a08_AbstractionExercises {
 
     public static void main(String[] args) {
 
-        // 1. Crea una clase abstracta Shape con el método calculateArea(). Luego implementa dos subclases: Circle y Rectangle, y haz que cada una calcule su propia área.
+        // 1. Crea una clase abstracta Shape con el método calculateArea().
+        abstract class Shape {
+            public abstract double calculateArea();
+        }
+        //  implementa dos subclases: Circle y Rectangle, y haz que cada una calcule su propia área.
+        class Circle extends Shape {
+            private double radius;
+
+            public Circle(double radius) {
+                this.radius = radius;
+            }
+
+            @Override
+            public double calculateArea() {
+                return Math.PI * radius * radius;
+            }
+        }
+
+        class Rectangle extends Shape {
+            private double width;
+            private double height;
+
+            public Rectangle(double width, double height) {
+                this.width = width;
+                this.height = height;
+            }
+
+            @Override
+            public double calculateArea() {
+                return width * height;
+            }
+        }
+        //Ejemplo de uso
+        Shape circle = new Circle(5);
+        System.out.println("Área del círculo: " + circle.calculateArea());
+
+        Shape rectangle = new Rectangle(4, 6);
+        System.out.println("Área del rectángulo: " + rectangle.calculateArea());
+
 
         // 2. Crea una interfaz Playable con el método play(). Luego implementa esa interfaz en dos clases: Guitar y Piano. Cada una debe mostrar un mensaje diferente al ejecutarse.
+        interface Playable {
+            void play();
+        }
+        class Guitar implements Playable {
+            @Override
+            public void play() {
+                System.out.println("Tocando la guitarra");
+            }
+        }
+        class Piano implements Playable {
+            @Override
+            public void play() {
+                System.out.println("Tocando el piano");
+            }
+        }
+        //Ejemplo de uso
+        Playable guitar = new Guitar();
+        guitar.play();
+        Playable piano = new Piano();
+        piano.play();
 
         // 3. Define una clase abstracta Animal con el método makeSound(). Implementa Dog y Cat para que hagan sonidos distintos. Crea un array de Animal para mostrar polimorfismo.
 
@@ -28,5 +86,6 @@ public class a08_AbstractionExercises {
         // 9. Crea una clase abstracta Document con el método print(). Luego crea PDFDocument y WordDocument, cada una con su forma de imprimir.
 
         // 10. Crea una interfaz Payable con el método pay(). Luego implementa las clases Invoice y EmployeePayment, cada una mostrando un mensaje de pago diferente.
+
     }
 }

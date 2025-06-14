@@ -5,7 +5,7 @@ Clase 8 - Manejo de excepciones, depuración y extras (28/05/2025)
 Vídeo: https://www.twitch.tv/videos/2471305243
 */
 
-public class Exceptions {
+public class a01_Exceptions {
 
     public static void main(String[] args) {
 
@@ -30,7 +30,7 @@ public class Exceptions {
         } catch (ArithmeticException e) {
             System.out.println("Cuidado con dividir algo que no puedes: " + e);
         } catch (NullPointerException e) {
-            System.out.println("Ha ocurrido un null pointer mítico!");
+            System.out.println("Ha ocurrido un null pointer mítico!" + e);
         } catch (Exception e) {
             System.out.println("Se ha producido un error no esperado");
         }
@@ -59,7 +59,6 @@ public class Exceptions {
         } catch (CustomException e) {
             System.out.println("Error revisando la puntuación: "+ e.getMessage());
         }
-
         System.out.println("Fin");
     }
 }

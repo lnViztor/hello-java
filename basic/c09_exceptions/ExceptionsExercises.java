@@ -10,8 +10,22 @@ public class ExceptionsExercises {
     public static void main(String[] args) {
 
         // 1. Divide dos números almacenados en dos variables. Maneja la división por cero con try-catch.
+        try {
+            int a = 10;
+            int b = 0; // Cambia este valor para probar la división por cero
+            int result = a / b;
+            System.out.println("Resultado: " + result);
+        } catch (ArithmeticException e) {
+            System.out.println("Error: División por cero no permitida.");
+        }
 
         // 2. Crea un array de 3 elementos e intenta acceder al índice 5. Captura el ArrayIndexOutOfBoundsException.
+        try {
+            int[] array = {1, 2, 3};
+            System.out.println("Elemento en índice 5: " + array[5]);
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("Error: Índice fuera de los límites del array.");
+        }
 
         // 3. Crea una variable String nula e intenta imprimir su longitud. Maneja el NullPointerException.
 
