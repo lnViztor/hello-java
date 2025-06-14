@@ -45,7 +45,9 @@ public class Extras {
 
         test();
 
-        // static
+        // static: variables y métodos estáticos
+        // static: se pueden usar sin instanciar la clase
+
     }
 
     public static void test() {
