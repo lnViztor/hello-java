@@ -87,7 +87,7 @@ public class ExceptionsExercises {
         // 9. Crea una función checkPassword(String pass) que lance una excepción si la contraseña es demasiado corta.
 
         try {
-            checkPassword("123"); // Cambia este valor para probar la excepción
+            checkPassword("123456"); // Cambia este valor para probar la excepción
         } catch (Exception e) {
             System.out.println("Error: " + e.getMessage());
         }
@@ -100,6 +100,7 @@ public class ExceptionsExercises {
             System.out.println("Error: " + e.getMessage());
         }
     }
+    // 9. Define una función checkPassword(String pass) que lance una excepción si la contraseña es demasiado corta.
     private static void checkPassword(String pass) throws Exception {
         if (pass.length() < 6) {
             throw new Exception("La contraseña debe tener al menos 6 caracteres.");
